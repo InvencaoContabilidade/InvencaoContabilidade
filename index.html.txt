@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Invencao Contabilidade - Serviços de contabilidade, consultoria contábil e tributária, gestão empresarial e apoio administrativo em Aracaju - Sergipe.">
+    <meta name="keywords" content="contabilidade em Aracaju, contador Aracaju, contabilidade Sergipe, consultoria contábil, consultoria tributária, Invencao Contabilidade">
+    <meta name="author" content="Invencao Contabilidade">
+
+    <title>Invencao Contabilidade | Aracaju - SE</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0b3d62;
+            --primary-dark: #072a44;
+            --secondary: #0d6efd;
+            --green: #19a974;
+            --green-dark: #11845a;
+            --light: #f4f8fb;
+            --text: #263746;
+            --muted: #6c7a89;
+            --white: #ffffff;
+            --border: #e5edf3;
+            --shadow: 0 15px 40px rgba(7, 42, 68, 0.10);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(7, 42, 68, 0.98);
+            padding: 15px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,.08);
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .navbar-brand span {
+            color: #28c58a;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,.85);
+            font-weight: 500;
+            margin-left: 15px;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #28c58a;
+        }
+
+        .btn-navbar {
+            background: var(--green);
+            color: #fff !important;
+            padding: 10px 20px !important;
+            border-radius: 50px;
+            margin-left: 20px !important;
+        }
+
+        .btn-navbar:hover {
+            background: var(--green-dark);
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 690px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(110deg, rgba(7,42,68,.98), rgba(11,61,98,.90)),
+                url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1800&q=80')
+                center/cover;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(40,197,138,.08);
+            right: -180px;
+            top: -180px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 50px;
+            background: rgba(255,255,255,.08);
+            color: #dff9ee;
+            font-size: .9rem;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.1;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #28c58a;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.78);
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .btn-main {
+            background: var(--green);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: none;
+            transition: .3s;
+        }
+
+        .btn-main:hover {
+            background: var(--green-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light-custom {
+            color: white;
+            border: 1px solid rgba(255,255,255,.4);
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        /* SECTION */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-title {
+            margin-bottom: 55px;
+        }
+
+        .section-title .mini-title {
+            color: var(--green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: .8rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 {
+            color: var(--primary-dark);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            max-width: 700px;
+            margin: 15px auto 0;
+        }
+
+        /* SERVICE CARDS */
+        .service-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 35px 30px;
+            height: 100%;
+            transition: .35s;
+            box-shadow: 0 5px 20px rgba(7,42,68,.03);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+            border-color: rgba(25,169,116,.25);
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: rgba(25,169,116,.1);
+            color: var(--green);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+
+        .service-card h4 {
+            color: var(--primary-dark);
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            margin: 0;
+            font-size: .95rem;
+        }
+
+        /* ABOUT */
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 18px;
+            min-height: 450px;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        .experience-box {
+            position: absolute;
+            bottom: -25px;
+            right: -20px;
+            background: var(--green);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .experience-box strong {
+            font-size: 2rem;
+            display: block;
+            font-family: 'Poppins';
+        }
+
+        .about-content h2 {
+            color: var(--primary-dark);
+            font-weight: 800;
+        }
+
+        .about-content p {
+            color: var(--muted);
+        }
+
+        .check-list {
+            padding: 0;
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 14px;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .check-list i {
+            color: var(--green);
+            margin-right: 8px;
+        }
+
+        /* STATS */
+        .stats {
+            background: var(--primary-dark);
+            padding: 65px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .stat-item i {
+            color: #28c58a;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-item strong {
+            font-family: 'Poppins';
+            font-size: 2rem;
+            display: block;
+        }
+
+        .stat-item span {
+            color: rgba(255,255,255,.65);
+            font-size: .9rem;
+        }
+
+        /* CNAE */
+        .cnae-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 25px;
+            height: 100%;
+            border: 1px solid var(--border);
+            transition: .3s;
+        }
+
+        .cnae-card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .cnae-code {
+            color: var(--green);
+            font-size: .8rem;
+            font-weight: 800;
+            letter-spacing: .5px;
+            margin-bottom: 10px;
+        }
+
+        .cnae-card h5 {
+            color: var(--primary-dark);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .cnae-badge {
+            display: inline-block;
+            font-size: .7rem;
+            background: rgba(13,110,253,.08);
+            color: var(--secondary);
+            padding: 4px 9px;
+            border-radius: 20px;
+            margin-top: 8px;
+            font-weight: 700;
+        }
+
+        /* DIFFERENTIALS */
+        .differential {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .differential-icon {
+            min-width: 55px;
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            background: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        .differential h5 {
+            margin-bottom: 5px;
+            color: var(--primary-dark);
+        }
+
+        .differential p {
+            margin: 0;
+            color: var(--muted);
+            font-size: .92rem;
+        }
+
+        /* COMPANY DATA */
+        .data-box {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(7,42,68,.04);
+        }
+
+        .data-row {
+            display: flex;
+            padding: 17px 22px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-label {
+            width: 40%;
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        .data-value {
+            width: 60%;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: .9rem;
+        }
+
+        /* CONTACT */
+        .contact-card {
+            background: var(--primary-dark);
+            border-radius: 20px;
+            padding: 45px;
+            color: white;
+            height: 100%;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item-icon {
+            width: 45px;
+            min-width: 45px;
+            height: 45px;
+            background: rgba(40,197,138,.15);
+            color: #28c58a;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: .9rem;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            color: rgba(255,255,255,.7);
+            font-size: .9rem;
+        }
+
+        .contact-item a:hover {
+            color: #28c58a;
+        }
+
+        .map-container {
+            height: 100%;
+            min-height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background:
+                linear-gradient(100deg, rgba(11,61,98,.97), rgba(7,42,68,.96)),
+                url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80')
+                center/cover;
+        }
+
+        .cta h2 {
+            color: #fff;
+            font-weight: 800;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.72);
+            max-width: 700px;
+            margin: 15px auto 30px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #041d2f;
+            color: rgba(255,255,255,.65);
+            padding: 60px 0 25px;
+        }
+
+        .footer-brand {
+            color: #fff;
+            font-family: 'Poppins';
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .footer-brand span {
+            color: #28c58a;
+        }
+
+        footer h5 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 9px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,.6);
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: #28c58a;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 40px;
+            padding-top: 25px;
+            font-size: .8rem;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            z-index: 1000;
+            box-shadow: 0 8px 25px rgba(37,211,102,.35);
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            color: #fff;
+            transform: scale(1.08);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .navbar-nav {
+                padding-top: 15px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+            }
+
+            .btn-navbar {
+                display: inline-block;
+                margin: 10px 0 0 !important;
+            }
+
+            .hero {
+                min-height: 620px;
+            }
+
+            .about-content {
+                margin-top: 60px;
+            }
+
+            .experience-box {
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section {
+                padding: 70px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .about-image img {
+                min-height: 350px;
+            }
+
+            .experience-box {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                margin: -30px 20px 0;
+            }
+
+            .data-row {
+                display: block;
+            }
+
+            .data-label,
+            .data-value {
+                width: 100%;
+            }
+
+            .data-label {
+                margin-bottom: 3px;
+            }
+
+            .contact-card {
+                padding: 30px;
+            }
+
+            .map-container {
+                min-height: 350px;
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            <i class="bi bi-calculator-fill me-2"></i>
+            Invencao <span>Contabilidade</span>
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link btn-navbar" href="#contato">
+                        <i class="bi bi-chat-dots me-1"></i>
+                        Fale Conosco
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="inicio">
+
+    <div class="container hero-content">
+
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Escritório de Contabilidade em Aracaju - SE
+                </div>
+
+                <h1>
+                    Contabilidade que
+                    <span>apoia o crescimento</span>
+                    da sua empresa.
+                </h1>
+
+                <p>
+                    Soluções contábeis, tributárias, administrativas e de
+                    gestão para ajudar sua empresa a tomar decisões com mais
+                    segurança, organização e eficiência.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a href="#servicos" class="btn btn-main">
+                        Conheça nossos serviços
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="#contato" class="btn btn-outline-light-custom">
+                        <i class="bi bi-telephone me-2"></i>
+                        Entre em contato
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                    <i class="bi bi-calendar-check"></i>
+                    <strong>2012</strong>
+                    <span>Ano de fundação</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                    <i class="bi bi-building"></i>
+                    <strong>Ativa</strong>
+                    <span>Situação cadastral</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                    <i class="bi bi-person-badge"></i>
+                    <strong>CRC</strong>
+                    <span>SE-000384/O</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <strong>Aracaju</strong>
+                    <span>Sergipe</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+<section class="section" id="servicos">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span class="mini-title">
+                O que fazemos
+            </span>
+
+            <h2>
+                Soluções para sua empresa
+            </h2>
+
+            <p>
+                Conte com serviços especializados para organizar sua empresa,
+                apoiar sua gestão e cuidar das suas necessidades contábeis
+                e tributárias.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Serviços de Contabilidade</h4>
+
+                    <p>
+                        Organização e acompanhamento das informações contábeis
+                        para apoiar uma gestão empresarial mais segura e eficiente.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Consultoria Contábil</h4>
+
+                    <p>
+                        Orientação especializada para auxiliar empresários
+                        na compreensão e organização de suas informações contábeis.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-receipt"></i>
+                    </div>
+
+                    <h4>Consultoria Tributária</h4>
+
+                    <p>
+                        Apoio na análise e organização das questões tributárias
+                        relacionadas às atividades da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Gestão Empresarial</h4>
+
+                    <p>
+                        Consultoria em gestão para ajudar empresas a estruturar
+                        processos e melhorar sua organização administrativa.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-clipboard-data"></i>
+                    </div>
+
+                    <h4>Apoio Administrativo</h4>
+
+                    <p>
+                        Serviços combinados de escritório e apoio administrativo
+                        para facilitar a rotina operacional das empresas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Card -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Auditoria Contábil e Tributária</h4>
+
+                    <p>
+                        Apoio especializado na análise de informações contábeis
+                        e tributárias de acordo com as necessidades da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+<section class="section section-light" id="sobre">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="about-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80"
+                        alt="Equipe trabalhando em escritório">
+
+                    <div class="experience-box">
+                        <strong>2012</strong>
+                        <span>Desde então, apoiando empresas</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="about-content">
+
+                    <span class="mini-title">
+                        Sobre a empresa
+                    </span>
+
+                    <h2 class="mb-4">
+                        Experiência e organização para apoiar seu negócio
+                    </h2>
+
+                    <p>
+                        A <strong>Invencao Contabilidade</strong>, razão social
+                        <strong>Antonio Alves da Invencao</strong>, está localizada
+                        em Aracaju, Sergipe, e iniciou suas atividades em
+                        30 de novembro de 2012.
+                    </p>
+
+                    <p>
+                        A empresa atua com serviços combinados de escritório e
+                        apoio administrativo, além de atividades relacionadas à
+                        contabilidade, consultoria em gestão empresarial,
+                        consultoria contábil e tributária.
+                    </p>
+
+                    <ul class="check-list">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Atendimento profissional
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Soluções contábeis e administrativas
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Consultoria em gestão empresarial
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Consultoria contábil e tributária
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     CNAES
+========================= -->
+<section class="section" id="atividades">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span class="mini-title">
+                Atividades
+            </span>
+
+            <h2>
+                Atividades e áreas de atuação
+            </h2>
+
+            <p>
+                Confira as atividades econômicas registradas para a empresa.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="cnae-card">
+
+                    <div class="cnae-code">
+                        CNAE 82.11-3-00
+                    </div>
+
+                    <h5>
+                        Serviços combinados de escritório e apoio administrativo
+                    </h5>
+
+                    <span class="cnae-badge">
+                        ATIVIDADE PRINCIPAL
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="cnae-card">
+
+                    <div class="cnae-code">
+                        CNAE 70.20-4-00
+                    </div>
+
+                    <h5>
+                        Atividades de consultoria em gestão empresarial,
+                        exceto consultoria técnica específica
+                    </h5>
+
+                    <span class="cnae-badge">
+                        ATIVIDADE SECUNDÁRIA
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="cnae-card">
+
+                    <div class="cnae-code">
+                        CNAE 69.20-6-01
+                    </div>
+
+                    <h5>
+                        Atividades de contabilidade
+                    </h5>
+
+                    <span class="cnae-badge">
+                        ATIVIDADE SECUNDÁRIA
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="cnae-card">
+
+                    <div class="cnae-code">
+                        CNAE 69.20-6-02
+                    </div>
+
+                    <h5>
+                        Atividades de consultoria e auditoria contábil
+                        e tributária
+                    </h5>
+
+                    <span class="cnae-badge">
+                        ATIVIDADE SECUNDÁRIA
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     DIFERENCIAIS
+========================= -->
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <span class="mini-title">
+                    Nosso propósito
+                </span>
+
+                <h2 class="mt-2 mb-4" style="color: var(--primary-dark); font-weight:800;">
+                    Informação organizada para decisões mais seguras
+                </h2>
+
+                <p style="color:var(--muted);">
+                    Uma boa organização contábil pode contribuir para que
+                    empresários tenham uma visão mais clara das informações
+                    relacionadas ao seu negócio.
+                </p>
+
+                <a href="#contato" class="btn btn-main mt-3">
+                    Fale com a Invencao
+                    <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="differential">
+
+                    <div class="differential-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+
+                    <div>
+                        <h5>Atendimento profissional</h5>
+                        <p>
+                            Comunicação e atendimento voltados às necessidades
+                            administrativas e contábeis da empresa.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="differential">
+
+                    <div class="differential-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <h5>Visão empresarial</h5>
+                        <p>
+                            Informações organizadas para auxiliar empresários
+                            na compreensão da realidade do negócio.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="differential">
+
+                    <div class="differential-icon">
+                        <i class="bi bi-layers"></i>
+                    </div>
+
+                    <div>
+                        <h5>Soluções integradas</h5>
+                        <p>
+                            Contabilidade, consultoria, gestão e apoio
+                            administrativo em um mesmo escritório.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="differential">
+
+                    <div class="differential-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+
+                    <div>
+                        <h5>Atuação desde 2012</h5>
+                        <p>
+                            Empresa constituída em 30 de novembro de 2012,
+                            com situação cadastral informada como ativa.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     DADOS DA EMPRESA
+========================= -->
+<section class="section" id="empresa">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span class="mini-title">
+                Informações cadastrais
+            </span>
+
+            <h2>
+                Dados da empresa
+            </h2>
+
+            <p>
+                Informações de registro da Invencao Contabilidade.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                <div class="data-box">
+
+                    <div class="data-row">
+                        <div class="data-label">CNPJ</div>
+                        <div class="data-value">17.250.173/0001-60</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Razão Social</div>
+                        <div class="data-value">Antonio Alves da Invencao</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Nome Fantasia</div>
+                        <div class="data-value">Invencao Contabilidade</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Data de Abertura</div>
+                        <div class="data-value">30/11/2012</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Porte</div>
+                        <div class="data-value">Micro Empresa</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Natureza Jurídica</div>
+                        <div class="data-value">Empresário (Individual)</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Opção pelo MEI</div>
+                        <div class="data-value">Não</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Opção pelo Simples</div>
+                        <div class="data-value">Não</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Capital Social</div>
+                        <div class="data-value">R$ 10.000,00</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Tipo</div>
+                        <div class="data-value">Matriz</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Situação</div>
+                        <div class="data-value">
+                            <span class="badge bg-success">
+                                <i class="bi bi-check-circle me-1"></i>
+                                Ativa
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">CRC</div>
+                        <div class="data-value">SE-000384/O</div>
+                    </div>
+
+                    <div class="data-row">
+                        <div class="data-label">Data da Situação Cadastral</div>
+                        <div class="data-value">30/11/2012</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+<section class="cta text-center">
+
+    <div class="container">
+
+        <h2>
+            Precisa de apoio contábil ou empresarial?
+        </h2>
+
+        <p>
+            Entre em contato com a Invencao Contabilidade e conheça
+            nossas soluções para sua empresa.
+        </p>
+
+        <a href="#contato" class="btn btn-main">
+            <i class="bi bi-chat-text me-2"></i>
+            Solicitar atendimento
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+<section class="section section-light" id="contato">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span class="mini-title">
+                Fale conosco
+            </span>
+
+            <h2>
+                Entre em contato
+            </h2>
+
+            <p>
+                Estamos localizados em Aracaju, Sergipe.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="contact-card">
+
+                    <h3>
+                        Invencao Contabilidade
+                    </h3>
+
+                    <!-- E-mail -->
+                    <div class="contact-item">
+
+                        <div class="contact-item-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+
+                        <div>
+                            <strong>E-mail</strong>
+
+                            <a href="mailto:ismael@cednetprovenet.digital">
+                                ismael@cednetprovenet.digital
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="contact-item">
+
+                        <div class="contact-item-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+
+                        <div>
+                            <strong>Telefone</strong>
+
+                            <a href="tel:+557941417934">
+                                (79) 4141-7934
+                            </a>
+
+                            <br>
+
+                            <a href="tel:+557932146362">
+                                (79) 3214-6362
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Endereço -->
+                    <div class="contact-item">
+
+                        <div class="contact-item-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+
+                        <div>
+                            <strong>Endereço</strong>
+
+                            <span>
+                                Avenida Alexandre Alcino, 1900<br>
+                                Santa Maria<br>
+                                Aracaju - SE<br>
+                                CEP 49044-093
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+
+                        <a
+                            href="mailto:ismael@cednetprovenet.digital"
+                            class="btn btn-main">
+
+                            <i class="bi bi-envelope me-1"></i>
+                            Enviar E-mail
+
+                        </a>
+
+                        <a
+                            href="tel:+557941417934"
+                            class="btn btn-outline-light-custom">
+
+                            <i class="bi bi-telephone me-1"></i>
+                            Ligar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="map-container">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Avenida%20Alexandre%20Alcino%2C%201900%2C%20Santa%20Maria%2C%20Aracaju%2C%20SE&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+                    <i class="bi bi-calculator-fill me-2"></i>
+                    Invencao <span>Contabilidade</span>
+                </div>
+
+                <p class="mt-3">
+                    Serviços de contabilidade, consultoria, gestão empresarial
+                    e apoio administrativo em Aracaju - Sergipe.
+                </p>
+
+                <p>
+                    <strong>CNPJ:</strong> 17.250.173/0001-60
+                </p>
+
+            </div>
+
+            <div class="col-6 col-lg-2">
+
+                <h5>Navegação</h5>
+
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#empresa">Empresa</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-6 col-lg-2">
+
+                <h5>Serviços</h5>
+
+                <ul>
+                    <li><a href="#servicos">Contabilidade</a></li>
+                    <li><a href="#servicos">Consultoria</a></li>
+                    <li><a href="#servicos">Gestão</a></li>
+                    <li><a href="#servicos">Tributário</a></li>
+                    <li><a href="#servicos">Administrativo</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5>Contato</h5>
+
+                <ul>
+                    <li>
+                        <i class="bi bi-telephone me-2"></i>
+                        <a href="tel:+557941417934">
+                            (79) 4141-7934
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:ismael@cednetprovenet.digital">
+                            E-mail
+                        </a>
+                    </li>
+
+                    <li>
+                        <i class="bi bi-geo-alt me-2"></i>
+                        Aracaju - SE
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom text-center">
+
+            <p class="mb-1">
+                © 2026 Invencao Contabilidade. Todos os direitos reservados.
+            </p>
+
+            <p class="mb-0">
+                Antonio Alves da Invencao • CNPJ 17.250.173/0001-60
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP
+========================= -->
+<a
+    href="https://wa.me/557941417934"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp"
+    aria-label="Falar pelo WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
